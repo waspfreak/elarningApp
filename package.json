@@ -1,0 +1,22 @@
+{
+  "name": "elearning-downloads",
+  "version": "1.0.0",
+  "description": "elearning-downloads plataform",
+  "main": "index.js",
+  "scripts": {
+    "start": "browser-sync start -s -f index.html src --no-ui --no-notify"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.8"
+  },
+  "dependencies": {
+    "foundation-sites": "^6.4.4-rc1",
+    "grunt": "^1.0.1",
+    "grunt-bless": "^1.0.2",
+    "grunt-contrib-uglify": "^2.3.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-sass": "^2.0.0"
+  },
+  "author": "Juliana L",
+  "license": "ISC"
+}

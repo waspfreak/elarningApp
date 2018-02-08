@@ -1,0 +1,300 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>ITPro Today </title>
+        <link rel="stylesheet" href="style.css">
+        <script defer src="https://use.fontawesome.com/releases/v5.0.3/js/all.js"></script>
+         
+    </head>
+    <body>
+        
+    <!-- Include Header -->
+    <!-- <div data-include="header.html"></div> -->
+    <header class="header fullWidth ">
+        <section class="info">
+            <div id="iribbon-container" class="">
+            <div id="iribbon-wrapper">
+            <div id="iribbon-detail">
+                <div id="iribbon-left">        
+                    <p> Knect365 is part of the Knowledge and Networking Division of Informa PLC</p>
+                    
+                    <ul>
+                        <li class="iribbon-mainlink"><a href="http://informa.com/" target="_blank">Informa PLC</a></li>
+                        <li><a href="http://informa.com/About-Us/" target="_blank">About us</a></li>
+                        <li><a href="http://informa.com/Investors/" target="_blank">Investor relations</a></li>
+                        <li><a href="http://informa.com/Talent/" target="_blank">Talent</a></li>
+                    </ul>
+                </div>
+
+                <div id="iribbon-right">
+                    <p>This site is operated by a business or businesses owned by Informa PLC and all copyright resides with them. Informa PLC's registered office is 5 Howick Place, London SW1P 1WG. Registered in England and Wales. Number 3099067.</p>
+                </div>
+            </div>
+                <div id="iribbon-title">Informa</div>
+            </div>
+            </div>
+
+
+            <div class="menu fullWidth">
+                <div class="row">
+                    <div class="columns small-12 nopadding ">
+                        <div class="menu-toggle" style="display: none;" onclick="openNav()">&#9776; <span>Menu</span></div>
+                        <a href="https://knect365.com/"><img class="logo" src="./assets/img/knect365-logo.jpg" alt="kNect365" target="_blank"/></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Menu -->
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Clients</a>
+                <a href="#">Contact</a>
+            </div>
+            <!-- End Menu -->
+
+            <div class="info-banner fullWidth ">
+                <div class="row valign-middle ">
+                    <div class="columns colum-12 logo nopadding">
+                        ITPro<span> Today<small></small></span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="info-text fullWidth">
+                <div class="row">
+                    <div class="columns">
+                    <h2>Notice</h2>
+                    <p>As of January 1, 2018, ITPro Today's eLearning courser are no longer accessible from our site. However, we have made our course archive available for our valued customers who have purchased courses in the past to download and Personally store. This archive will be availble only until June 30, 2018.</p>
+
+                    <p>After June 30, 2018 the downloads will be taken offline for good. We recommendt you download any sessions you would like to retain.</p>
+
+
+                    <p><strong>EXTRA</strong> We have changed our training model in that our coursers are now branded under our conference name, IT/Dev Connections, and will be offered for free. Stay tuned for course schedules and topics available on <a class="link-color" href="http://www.itprotoday.com/itdev-connections-ondemand" target="_blank">ITPro Today</a>.</p>
+
+                    <p>As always, we appreciate your loyalty and patronage and hope you will continue to enjoy our free sessions and plain to join us live at IT/Dev Connection 2018. <a class="link-color" href="http://itdevconnections.com/dc18/Public/Enter.aspx " target="_blank">IT/Dev Connection 2018</a> takes place in Dallas, Texas October 15-18.</p>
+
+                    <p>
+                        If you have any questions please contact customer service at customersupport@informa.com or (800) 262-1954
+                    </p>
+                    </div>
+
+                </div>
+                
+            </div>
+
+        </section>
+    </header>
+
+    <div class="main">
+            <div class="row">
+                <div class="columns main-content">
+                    <!--TITLE-->
+                    <div class="row main-content-title">
+                        <div class="columns medium-8 nopadding">Name</div>
+                        <div class="columns medium-3 nopadding text-center ">Last Modified</div>
+                        <div id="expand-all" class="columns medium-1 nopadding text-center expand-all noselect">
+                            <span class="el">Expand All</span>
+                            <span class="el hide">Close All</span>
+                        </div>
+                    </div>
+                    <!--TITLE-->
+                  
+                    <dl class="accordion" data-accordion id="container" >
+                        
+                    </dl>
+                    <script type="mustache/x-tmpl" id="accordionItem">
+                            {{#list}}
+                                <dd class="accordion-navigation" id="accordionItem">
+                                    <a href='#{{id}}'>
+                                        <span class="columns medium-8 nopadding title">{{title}} </span>
+
+                                        <span class="columns medium-3 nopadding date margin-left text-center"><span>{{time}}</span></span>
+                                        <span id="icon-arrow" class="columns medium-1 nopadding icon text-center ">
+                                            <i class="fas fa-angle-down arrow"></i>
+                                            <i class="fas fa-angle-right arrow hide"></i>
+                                        </span>
+                                    </a>
+                                    
+                                    
+                                    <div id="{{id}}" class="content ">
+                                      <ul class="content-list_item">
+                                       {{#videos}}
+                                            <li>
+                                                <a href="{{href}}" data-reveal-id="{{dataRevealId}}" target="_blank">
+                                                    <span class="columns medium-8 nopadding">{{titleVideo}}</span>
+                                                    <span class="columns medium-3 nopadding date text-center">
+                                                        <span>{{timeVideo}}</span></span>
+                                                    <span class="columns medium-1 nopadding icon "><i class="far {{icon}}"></i></span>
+                                                </a>
+
+                                              
+                                            </li>
+                                        {{/videos}}
+                                      </ul>
+                                    </div>
+                                    
+                                </dd>
+
+
+                            {{/list}}
+                    </script>
+                    
+                    
+                    
+                </div> <!-- End main-content -->
+            </div> <!-- row -->
+            <!--MODAL -->
+
+
+
+<div id="containerModal">
+    <div id="" class="reveal-modal large" data-reveal data-reset-on-close="true" aria-labelledby="videoModalTitle" aria-hidden="true" role="dialog">
+    <div class="flex-video widescreen vimeo">
+        <header class="modal-header">
+            <h3>If the video does not start in 30 seconds please click the download video link at the bottom of this screen.</h3>
+        </header>
+            <video width="700" height="300" id="video" controls>
+                <source id="myvideotag" src="" type="video/mp4">
+            </video>
+        <a  class="close-reveal-modal buttom close" id="" aria-label="Close">&#215;</a> 
+    </div>
+     <a  href="" target="_blank" class="download-video button">Download Video</a>
+    <footer class="footer fullWidth ">
+        <section class="footer-copyright">
+            <div class="row valign-middle">
+                <div class="columns small-6"> Copyright Knect365, 2018. All rights reserved</div>
+                <div class="columns small-6">
+                    <ul class="sec-links large-text-right" style="margin-top: 10px;">
+                        <li><a class="link-white" href="https://knect365.com/privacy-policy">Privacy Policy</a></li>
+                        <li><a class="link-white" href="http://www.informa.com/generic-content/terms--conditions/">Terms of Use</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </footer>
+</div>
+</div>
+                 <script type="mustache/x-tmpl" id="accordionModal">
+                            {{#list}}
+                                 {{#videos}}
+                                            <div id="{{dataRevealId}}" class="reveal-modal large" data-reveal data-reset-on-close="true" aria-labelledby="videoModalTitle" aria-hidden="true" role="dialog">
+                                                    <div class="flex-video widescreen vimeo">
+                                                            <header class="modal-header">
+                                                                <h3>If the video does not start in 30 seconds please click the download video link at the bottom of this screen.</h3>
+                                                            </header>
+                                                            {{#in_ca}}
+                                                                <video width="700" height="300" id={{idVideo}} controls>
+                                                                    <source  src="{{href}}" type="video/mp4"/>
+                                                                </video>
+                                                            {{/in_ca}}
+
+
+                                                            <a  class="close-reveal-modal buttom close" id="close1" aria-label="Close">&#215;</a> 
+                                                    </div>
+                                                    <a  href="{{href}}" target="_blank" class="download-video button">Download Video</a>
+                                                        <footer class="footer fullWidth ">
+                                                            <section class="footer-copyright">
+                                                                <div class="row valign-middle">
+                                                                    <div class="columns small-6"> Copyright Knect365, 2018. All rights reserved</div>
+                                                                    <div class="columns small-6">
+                                                                        <ul class="sec-links large-text-right" style="margin-top: 10px;">
+                                                                            <li><a class="link-white" href="knect365.com/privacy-policy">Privacy Policy</a></li>
+                                                                            <li><a class="link-white" href="www.informa.com/generic-content/terms--conditions/">Terms of Use</a></li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </section>
+                                                        </footer>
+                                                </div>
+                                          
+                                        {{/videos}}
+                            
+                                    </div>
+                         
+
+
+                            {{/list}}
+                </script>
+
+
+
+</div><!-- main -->
+
+    <!-- Include Header -->
+    <!-- <div data-include="footer.html"></div> -->
+
+    <footer class="footer fullWidth ">
+        <section class="footer-links">
+             <div class="row">
+                 <div class="columns small-12 medium-2">
+                     <img src="assets/img/logo-footer.jpg" class="logo-footer" alt=""/>
+                 </div>
+                 <div class="columns small-12 medium-3">
+                     <ul class="footer-link-menu">
+                         <li><a href="https://energy.knect365.com/?_ga=2.217019537.607212566.1515669738-1282152094.1507290110">Energy</a></li>
+                         <li><a href="https://finance.knect365.com/?_ga=2.217019537.607212566.1515669738-1282152094.1507290110">Finance</a></li>
+                         <li><a href="https://marketing.knect365.com/?_ga=2.217019537.607212566.1515669738-1282152094.1507290110">Insight, Marketing & Innovation</a></li>
+                         <li><a href="https://law.knect365.com/?_ga=2.217019537.607212566.1515669738-1282152094.1507290110">Law</a></li>
+                         <li><a href="https://lifesciences.knect365.com/?_ga=2.139899828.607212566.1515669738-1282152094.1507290110">Life Sciences</a></li>
+                     </ul>
+                 </div>
+                 <div class="columns small-12 medium-3">
+                     <ul class="footer-link-menu">
+                         <li><a href="https://maritime.knect365.com/?_ga=2.139899828.607212566.1515669738-1282152094.1507290110">Maritime</a></li>
+                         <li><a href="https://tmt.knect365.com/?_ga=2.139899828.607212566.1515669738-1282152094.1507290110">Telecoms, Media & technology</a></li>
+                         <li><a href="https://ebdgroup.knect365.com/?_ga=2.139899828.607212566.1515669738-1282152094.1507290110">EBD Group</a></li>
+                         <li><a href="https://automotive.knect365.com/?_ga=2.139899828.607212566.1515669738-1282152094.1507290110">Automotive</a></li>
+                     </ul>
+                 </div>
+                 <div class="columns small-12 medium-3">
+                     <ul class="footer-link-menu">
+                         <li><span>About Knect365</span></a></li>
+                         <li><a href="http://www.informa.com/"><span class="noBold">Corporative Site</span></a></li>
+                         <li><a href="http://www.informa.com/divisions/knowledge-and-networking/work-with-us/"><span class="noBold">Job Oportunities</span></a></li>
+                     </ul>
+                 </div>
+                 <div class="columns small-12 medium-1"></div>
+             </div>
+        </section>
+        <section class="footer-copyright">
+            <div class="row valign-middle">
+                <div class="columns small-6">
+                    Copyright Knect365, 2018. All rights reserved
+                </div>
+                <div class="columns small-6">
+                    <ul class="sec-links large-text-right">
+                        <li><a class="link-white" href="https://knect365.com/privacy-policy">Privacy Policy</a></li>
+                        <li><a class="link-white" href="http://www.informa.com/generic-content/terms--conditions/">Terms of Use</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </footer>
+
+  
+   
+
+    <script src="./assets/scripts/min/jquery.min.js"></script>
+    <script  src="./assets/scripts/min/vendor.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.js"></script>
+    <script  src="./assets/scripts/app.js"></script>
+    <script  src="./assets/scripts/data.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112920890-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-112920890-1');
+    </script>
+
+
+
+    </body>
+</html>
