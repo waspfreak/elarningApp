@@ -95,9 +95,9 @@
                 <div class="columns main-content">
                     <!--TITLE-->
                     <div class="row main-content-title">
-                        <div class="columns medium-8 nopadding">Name</div>
-                        <div class="columns medium-3 nopadding text-center ">Last Modified</div>
-                        <div id="expand-all" class="columns medium-1 nopadding text-center expand-all noselect">
+                        <div class="columns medium-8 small-6 nopadding">Name</div>
+                        <div class="columns medium-3 small-3 nopadding text-center ">Last Modified</div>
+                        <div id="expand-all" class="columns medium-1 small-1 nopadding text-center expand-all noselect">
                             <span class="el">Expand All</span>
                             <span class="el hide">Close All</span>
                         </div>
@@ -111,10 +111,10 @@
                             {{#list}}
                                 <dd class="accordion-navigation" id="accordionItem">
                                     <a href='#{{id}}'>
-                                        <span class="columns medium-8 nopadding title">{{title}} </span>
+                                        <span class="columns medium-8 small-6 nopadding title">{{title}} </span>
 
-                                        <span class="columns medium-3 nopadding date margin-left text-center"><span>{{time}}</span></span>
-                                        <span id="icon-arrow" class="columns medium-1 nopadding icon text-center ">
+                                        <span class="columns medium-3 small-3 nopadding date margin-left text-center"><span>{{time}}</span></span>
+                                        <span id="icon-arrow" class="columns medium-1 small-1 nopadding icon text-center ">
                                             <i class="fas fa-angle-down arrow"></i>
                                             <i class="fas fa-angle-right arrow hide"></i>
                                         </span>
@@ -126,10 +126,10 @@
                                        {{#videos}}
                                             <li>
                                                 <a href="{{href}}" data-reveal-id="{{dataRevealId}}" target="_blank">
-                                                    <span class="columns medium-8 nopadding">{{titleVideo}}</span>
-                                                    <span class="columns medium-3 nopadding date text-center">
+                                                    <span class="columns medium-8 small-6 nopadding">{{titleVideo}}</span>
+                                                    <span class="columns medium-3 small-3 nopadding date text-center">
                                                         <span>{{timeVideo}}</span></span>
-                                                    <span class="columns medium-1 nopadding icon "><i class="far {{icon}}"></i></span>
+                                                    <span class="columns medium-1 small-1 nopadding icon "><i class="far {{icon}}"></i></span>
                                                 </a>
 
                                               
